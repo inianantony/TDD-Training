@@ -34,12 +34,25 @@ namespace CartLibTests
 		}
 
 		[TestMethod()]
-		public void GetPrice_Return_200_When_There_Are_2_Books_In_Cart()
+		public void GetPrice_Return_200_When_There_Are_2_Same_Books_In_Cart()
 		{
 			var cart = new Cart();
 			cart.Add(new Book { BookName = "book1", Price = 100 });
 			cart.Add(new Book { BookName = "book1", Price = 100 });
 			var expected = 200;
+
+			var actual = cart.GetPrice();
+
+			Assert.AreEqual(expected, actual);
+		}
+
+		[TestMethod()]
+		public void GetPrice_Return_5_Percent_Discount_200_WhichIs_190_When_There_Is_Book1_And_Book2_In_Cart()
+		{
+			var cart = new Cart();
+			cart.Add(new Book { BookName = "book1", Price = 100 });
+			cart.Add(new Book { BookName = "book2", Price = 100 });
+			var expected = 190;
 
 			var actual = cart.GetPrice();
 
