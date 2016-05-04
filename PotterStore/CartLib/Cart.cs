@@ -14,7 +14,7 @@ namespace CartLib
 		{
 			if(!_BookCart.Any())
 				return 0;
-			return 100;
+			return _BookCart.Sum(x => x.Price);
 		}
 
 		public void Add(Book book)
