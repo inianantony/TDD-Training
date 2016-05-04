@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Linq;
 using System.Collections.Generic;
 
 namespace CartLib
@@ -10,9 +10,11 @@ namespace CartLib
 		{
 		}
 
-		public object GetPrice()
+		public decimal GetPrice()
 		{
-			return 0;
+			if(!_BookCart.Any())
+				return 0;
+			return 100;
 		}
 
 		public void Add(Book book)
