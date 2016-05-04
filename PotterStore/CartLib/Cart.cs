@@ -10,7 +10,7 @@ namespace CartLib
 
 		public object GetPrice()
 		{
-			throw new NotImplementedException();
+			return 0;
 		}
 	}
 }

@@ -19,7 +19,6 @@ namespace CartLibTests
 			var actual = cart.GetPrice();
 
 			Assert.AreEqual(expected, actual);
-
 		}
 	}
 }
