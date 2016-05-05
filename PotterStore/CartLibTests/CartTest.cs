@@ -61,13 +61,13 @@ namespace CartLibTests
 
 
 		[TestMethod()]
-		public void GetPrice_Return_10_Percent_Discount_On_300_WhichIs_170_When_There_Is_Book1_Plus_Book2_And__Book3_In_Cart()
+		public void GetPrice_Return_10_Percent_Discount_On_300_WhichIs_270_When_There_Is_Book1_Plus_Book2_And__Book3_In_Cart()
 		{
 			var cart = new Cart();
 			cart.Add(new Book { BookName = "book1", Price = 100 });
 			cart.Add(new Book { BookName = "book2", Price = 100 });
 			cart.Add(new Book { BookName = "book3", Price = 100 });
-			var expected = 170;
+			var expected = 270;
 
 			var actual = cart.GetPrice();
 

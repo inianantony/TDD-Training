@@ -27,6 +27,10 @@ namespace CartLib
 			{
 				discount = 0.05m;
 			}
+			else if(bookCount.Count() == 3)
+			{
+				discount = 0.1m;
+			}
 			var totalPrice = bookCount.SelectMany(x => x.Value.Select(a => a.Price)).Sum(b => b);
 			return (totalPrice) - (totalPrice * discount);
 		}
