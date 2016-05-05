@@ -47,7 +47,7 @@ namespace CartLibTests
 		}
 
 		[TestMethod()]
-		public void GetPrice_Return_5_Percent_Discount_200_WhichIs_190_When_There_Is_Book1_And_Book2_In_Cart()
+		public void GetPrice_Return_5_Percent_Discount_On_200_WhichIs_190_When_There_Is_Book1_And_Book2_In_Cart()
 		{
 			var cart = new Cart();
 			cart.Add(new Book { BookName = "book1", Price = 100 });
